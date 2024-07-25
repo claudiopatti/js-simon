@@ -6,6 +6,8 @@ while (numberRandomList.length < 5)  {
     let numberRandom = getRndInteger(1, 5);
     if (!numberRandomList.includes(numberRandom)) {
         numberRandomList.push(numberRandom);
+        numberInside.innerHTML +=  ` <span> ${numberRandom} </span> ` ;   
+
         // let element = document.createElement('div');
         // element.innerHTML = ;
         // numberInside.append(element)
@@ -13,12 +15,12 @@ while (numberRandomList.length < 5)  {
     console.log('numberRandom', numberRandom , typeof numberRandom);
     // numberInside.append(element)
 }
-let element = document.createElement('div');
-element.innerHTML = numberRandomList;
-numberInside.append(element)
+// let element = document.createElement('div');
+// // element.innerHTML = numberRandomList;
+// numberInside.append(element)
 
-setInterval(function () {
-    element.innerHTML = '';
+setTimeout(function () {
+    numberInside.innerHTML = '';
     
 }, 3000);
 console.log('numberRandomList', numberRandomList, typeof numberRandomList)
@@ -52,13 +54,13 @@ setTimeout(function(){
 
         console.log('numberUtente', numberUtente, typeof numberUtente);
     }
-    result.innerHTML =  'quanti numeri indovinati: ' + ' ' + numeriIndovinati + ' ' + 'quali numeri indovinati: ' + ' ' + numeriIndovinatiValue;
+    result.innerHTML =  'quanti numeri indovinati: ' + ' ' + numeriIndovinati + ' ' + 'quali numeri indovinati: ' + ' ' + (numeriIndovinatiValue.join(' '));
     console.log('numberUtenteList', numberUtenteList, typeof numberUtenteList);
     console.log('numeriIndovinati', numeriIndovinati, typeof numeriIndovinati);
     console.log('numeriIndovinatiValue', numeriIndovinatiValue, typeof numeriIndovinati);
     
     
-},4000);
+},3100);
 
 // function stampa(x) {
     
