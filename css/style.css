@@ -7,3 +7,25 @@ reset
     padding: 0;
     box-sizing: border-box;
 }
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.position-number {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+#esteticClock {
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+}

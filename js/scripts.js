@@ -6,7 +6,7 @@ while (numberRandomList.length < 5)  {
     let numberRandom = getRndInteger(1, 5);
     if (!numberRandomList.includes(numberRandom)) {
         numberRandomList.push(numberRandom);
-        numberInside.innerHTML +=  ` <span> ${numberRandom} </span> ` ;   
+        numberInside.innerHTML +=  ` <div> ${numberRandom} </div> ` ;   
 
         // let element = document.createElement('div');
         // element.innerHTML = ;
@@ -19,19 +19,40 @@ while (numberRandomList.length < 5)  {
 // // element.innerHTML = numberRandomList;
 // numberInside.append(element)
 
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+};
+
+let timer = 30
+
+let clock = setInterval(function () {
+    let currentTime = parseInt(document.getElementById('timerFinish').innerText);
+    currentTime --;
+    console.log("currentTime", currentTime, typeof currentTime);
+    document.getElementById('timerFinish').innerHTML = currentTime
+    if (currentTime == 0) {
+        clearInterval(clock)
+        
+    }
+    
+}, 1000);
+
+setTimeout(function () {
+    document.getElementById('esteticClock').innerHTML =  '';
+    
+}, 31000);
+
+
 setTimeout(function () {
     numberInside.innerHTML = '';
     
-}, 3000);
+}, 31000);
 console.log('numberRandomList', numberRandomList, typeof numberRandomList)
 
 
 
 
-
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
-};
 
 let numberUtenteList = [];
 let numeriIndovinati = 0;
@@ -54,13 +75,13 @@ setTimeout(function(){
 
         console.log('numberUtente', numberUtente, typeof numberUtente);
     }
-    result.innerHTML =  'quanti numeri indovinati: ' + ' ' + numeriIndovinati + ' ' + 'quali numeri indovinati: ' + ' ' + (numeriIndovinatiValue.join(' '));
+    numberInside.innerHTML =  'quanti numeri indovinati: ' + ' ' + numeriIndovinati + ' ' + 'quali numeri indovinati: ' + ' ' + (numeriIndovinatiValue.join(' '));
     console.log('numberUtenteList', numberUtenteList, typeof numberUtenteList);
     console.log('numeriIndovinati', numeriIndovinati, typeof numeriIndovinati);
     console.log('numeriIndovinatiValue', numeriIndovinatiValue, typeof numeriIndovinati);
     
     
-},3100);
+},32000);
 
 // function stampa(x) {
     
