@@ -75,7 +75,7 @@ setTimeout(function(){
 
         console.log('numberUtente', numberUtente, typeof numberUtente);
     }
-    numberInside.innerHTML =  'quanti numeri indovinati: ' + ' ' + numeriIndovinati + ' ' + 'quali numeri indovinati: ' + ' ' + (numeriIndovinatiValue.join(' '));
+    numberInside.innerHTML =  'quanti numeri indovinati: ' + ' ' + numeriIndovinati + '<br>' + 'quali numeri indovinati: ' + ' ' + (numeriIndovinatiValue.join(' '));
     console.log('numberUtenteList', numberUtenteList, typeof numberUtenteList);
     console.log('numeriIndovinati', numeriIndovinati, typeof numeriIndovinati);
     console.log('numeriIndovinatiValue', numeriIndovinatiValue, typeof numeriIndovinati);
